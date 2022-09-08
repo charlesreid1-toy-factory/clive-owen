@@ -1,1 +1,4 @@
 Click
+flake8
+black
+pre-commit
