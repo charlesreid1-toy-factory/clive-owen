@@ -24,10 +24,16 @@ def movie_new(name):
 @movie.command("contract")
 @click.argument("movie_name")
 @click.argument("amount", type=int)
-@click.option("--agent/--no-agent", default=True, help="Sign a movie contract with/without an agent")
+@click.option(
+    "--agent/--no-agent",
+    default=True,
+    help="Sign a movie contract with/without an agent",
+)
 def movie_contract(movie_name, amount, agent):
     """Sign a contract for a movie for amount."""
     if agent:
         click.echo(f'Signing contract for movie "{movie_name}" for amount {amount}')
     else:
-        click.echo(f'Signing contract WITHOUT AN AGENT for movie "{movie_name}" for amount {amount}')
+        click.echo(
+            f'Signing contract WITHOUT AN AGENT for movie "{movie_name}" for amount {amount}'
+        )
