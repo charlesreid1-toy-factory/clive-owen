@@ -1,0 +1,52 @@
+site_name: Clive Owen
+site_url: https://charlesreid1-toy-factory.github.io/clive-owen
+repo_name: clive-owen
+repo_url: https://github.com/charlesreid1-toy-factory/clive-owen
+docs_dir: docs
+edit_uri: ""
+copyright: Copyright &copy; 2022 Chaz Reid
+
+nav:
+  - Index: index.md
+
+theme:
+  name: material
+  language: en
+  icon:
+    logo: material/coffee-maker
+  features:
+    - navigation.indexes
+    - navigation.instant
+    - navigation.tabs.sticky
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - css/extra.css
+
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.details
+  - admonition
+  - toc:
+      baselevel: 2
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+
+plugins:
+  - search:
+      lang: en
